@@ -1,11 +1,19 @@
+import cast_upgrade_1_6_13  # @UnusedImport
 import re
 import cast.analysers.ua
 from cast.analysers import log, CustomObject, create_link
 
+
 class PowerShellExtension(cast.analysers.ua.Extension):
 
+
+    def __init__(self):
+        # Example use of the intermediate file to transfer content from analyzer level to application level.
+        # It requires declaration.
+        self.exchange_file = None
+
     def start_analysis(self, options):
-        log.info("[PowerShell] Starting analysis.")
+        log.info("Starting UA Analysis for PowerShell Framework...")
         self.objects_by_name = {}
 
     def start_file(self, file):
@@ -27,7 +35,7 @@ class PowerShellExtension(cast.analysers.ua.Extension):
         self._extract_invocations(content, program)
 
     def end_analysis(self):
-        log.info("[PowerShell] Analysis complete.")
+        log.info("Ending UA Analysis for PowerShell Framework")
 
     # ------------------------------------------------------------------
     # Helpers
@@ -41,7 +49,7 @@ class PowerShellExtension(cast.analysers.ua.Extension):
         if fullname:
             obj.set_fullname(fullname)
         obj.save()
-        log.debug(f"[PowerShell] Created {type_name}: {name}")
+        log.debug("[PowerShell] Created {0}: {1}".format(type_name, name))
         return obj
 
     def _extract_functions(self, content, parent):
@@ -58,4 +66,4 @@ class PowerShellExtension(cast.analysers.ua.Extension):
             target = self.objects_by_name.get(cmd.lower())
             if target:
                 create_link("callLink", call_obj, target)
-                log.debug(f"[PowerShell] Linked invocation -> {cmd}")
+                log.debug("[PowerShell] Linked invocation -> {0}".format(cmd))

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<castMetrics version="1.0">
+    <language name="PowerShell" version="1.0">
+        <metric id="NbLines" description="Number of Lines" type="counter"/>
+        <metric id="NbFunctions" description="Number of Functions" type="counter"/>
+    </language>
+</castMetrics>

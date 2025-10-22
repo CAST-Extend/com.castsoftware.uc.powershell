@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languagePattern>
+  <language name="powershell" category="POWERSHELL">
+    <patternList>
+      <pattern string="*.ps1"/>
+      <pattern string="*.psm1"/>
+      <pattern string="*.psd1"/>
+    </patternList>
+  </language>
+</languagePattern>
