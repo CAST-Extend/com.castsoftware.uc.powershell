@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>com.castsoftware.labs.powershell</id>
+    <version>0.1.0</version>
+    <title>Technology Extension for Powershell</title>
+    <description>Experimental PowerShell language support for CAST AIP.</description>
+  </metadata>
+</package>

@@ -1,0 +1,44 @@
+<metaModel file_level="builtin" file_no="9010">
+  <!-- Base category -->
+  <category name="POWERSHELL" rid="0">
+    <description>PowerShell Elements</description>
+    <attribute name="extensions" stringValue="*.ps1;*.psm1;*.psd1"/>
+    <inheritedCategory name="UniversalLanguage"/>
+  </category>
+
+  <!-- Root object for scripts -->
+  <type name="PowerShellProgram" rid="1">
+    <description>PowerShell Script File</description>
+    <inheritedCategory name="POWERSHELL"/>
+  </type>
+
+  <!-- Module (.psm1) -->
+  <type name="PowerShellModule" rid="2">
+    <description>PowerShell Module</description>
+    <inheritedCategory name="POWERSHELL"/>
+  </type>
+
+  <!-- Class -->
+  <type name="PowerShellClass" rid="3">
+    <description>PowerShell Class</description>
+    <inheritedCategory name="POWERSHELL"/>
+  </type>
+
+  <!-- Function or Method -->
+  <type name="PowerShellFunction" rid="4">
+    <description>PowerShell Function</description>
+    <inheritedCategory name="POWERSHELL"/>
+  </type>
+
+  <!-- Cmdlet / Call -->
+  <type name="PowerShellInvocation" rid="5">
+    <description>PowerShell Invocation (Cmdlet Call)</description>
+    <inheritedCategory name="POWERSHELL"/>
+  </type>
+
+  <!-- Optional later -->
+  <type name="PowerShellVariable" rid="6">
+    <description>PowerShell Variable</description>
+    <inheritedCategory name="POWERSHELL"/>
+  </type>
+</metaModel>
