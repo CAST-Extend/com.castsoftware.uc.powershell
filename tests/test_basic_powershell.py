@@ -16,7 +16,7 @@ class PowerShellBasicTest(unittest.TestCase):
         """
         Tests analyzer-level parsing of a PowerShell file (UA test only).
         """
-        analysis = run_analyzer_level(['tests/samples/test.ps1'])
+        analysis = run_analyzer_level(['samples/test.ps1'])
         program = analysis.get_object_by_name('test.ps1', 'PowerShellProgram')
         func = analysis.get_object_by_name('SayHello', 'PowerShellFunction')
 
@@ -47,7 +47,7 @@ class PowerShellBasicTest(unittest.TestCase):
         and executes PowerShellApplicationLevel on real DB.
         """
         engine = create_postgres_engine(port=2284)
-        kb = KnowledgeBase('powershell_sample_local', engine)
+        kb = KnowledgeBase('powershell_sample2_local', engine)
 
         # Either fetch an existing app, or run on KB directly
         try:

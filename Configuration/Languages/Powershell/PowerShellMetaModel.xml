@@ -1,43 +1,43 @@
-<metaModel file_level="builtin" file_no="9010">
+<metaModel file_level="builtin" file_no="401">
   <!-- Base category -->
-  <category name="POWERSHELL" rid="0">
+  <category name="POWERSHELL" rid="2401000">
     <description>PowerShell Elements</description>
     <attribute name="extensions" stringValue="*.ps1;*.psm1;*.psd1"/>
     <inheritedCategory name="UniversalLanguage"/>
   </category>
 
   <!-- Root object for scripts -->
-  <type name="PowerShell_Program" rid="1">
+  <type name="PowerShell_Program" rid="2401001">
     <description>PowerShell Script File</description>
     <inheritedCategory name="UAObject"/>
   </type>
 
   <!-- Module (.psm1) -->
-  <type name="PowerShell_Module" rid="2">
+  <type name="PowerShell_Module" rid="2401002">
     <description>PowerShell Module</description>
     <inheritedCategory name="UAObject"/>
   </type>
 
   <!-- Class -->
-  <type name="PowerShell_Class" rid="3">
+  <type name="PowerShell_Class" rid="2401003">
     <description>PowerShell Class</description>
     <inheritedCategory name="UAObject"/>
   </type>
 
   <!-- Function or Method -->
-  <type name="PowerShell_Function" rid="4">
+  <type name="PowerShell_Function" rid="2401004">
     <description>PowerShell Function</description>
     <inheritedCategory name="UAObject"/>
   </type>
 
   <!-- Cmdlet / Call -->
-  <type name="PowerShell_Invocation" rid="5">
+  <type name="PowerShell_Invocation" rid="2401005">
     <description>PowerShell Invocation (Cmdlet Call)</description>
     <inheritedCategory name="UAObject"/>
   </type>
 
   <!-- Optional later -->
-  <type name="PowerShell_Variable" rid="6">
+  <type name="PowerShell_Variable" rid="2401006">
     <description>PowerShell Variable</description>
     <inheritedCategory name="UAObject"/>
   </type>
